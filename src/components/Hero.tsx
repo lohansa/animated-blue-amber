@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 
 const Hero = () => {
@@ -37,9 +36,9 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 reveal">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-              <span className="text-white fancy-text-shadow">Digital Solutions</span>
+              <span className="text-white fancy-text-shadow">Digital Solutions </span>
               <br />
-              <div className="modern-typing mt-2 text-3xl md:text-4xl lg:text-5xl">
+              <div className="modern-typing mt-2 text-3xl md:text-4xl lg:text-5xl space-x-1">
                 <span className="letter">f</span>
                 <span className="letter">o</span>
                 <span className="letter">r</span>
@@ -98,25 +97,24 @@ const Hero = () => {
         </div>
         
         <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 reveal">
-          {/* Enhanced stats with clearer presentation */}
           <div className="stats-card bg-white/10 p-6 rounded-xl backdrop-blur-sm transform hover:scale-105 transition-all duration-300 text-center">
             <h2 className="text-4xl font-bold text-tectera-orange text-glow animate-pulse-subtle">10+</h2>
-            <p className="text-white mt-2 font-medium">Years<br/>Experience</p>
+            <p className="text-gray-200 mt-2 font-medium text-sm tracking-wide">Years<br/>Experience</p>
           </div>
           
           <div className="stats-card bg-white/10 p-6 rounded-xl backdrop-blur-sm transform hover:scale-105 transition-all duration-300 text-center">
             <h2 className="text-4xl font-bold text-tectera-orange text-glow animate-pulse-subtle">200+</h2>
-            <p className="text-white mt-2 font-medium">Projects<br/>Completed</p>
+            <p className="text-gray-200 mt-2 font-medium text-sm tracking-wide">Projects<br/>Completed</p>
           </div>
           
           <div className="stats-card bg-white/10 p-6 rounded-xl backdrop-blur-sm transform hover:scale-105 transition-all duration-300 text-center">
             <h2 className="text-4xl font-bold text-tectera-orange text-glow animate-pulse-subtle">50+</h2>
-            <p className="text-white mt-2 font-medium">Team<br/>Members</p>
+            <p className="text-gray-200 mt-2 font-medium text-sm tracking-wide">Team<br/>Members</p>
           </div>
           
           <div className="stats-card bg-white/10 p-6 rounded-xl backdrop-blur-sm transform hover:scale-105 transition-all duration-300 text-center">
             <h2 className="text-4xl font-bold text-tectera-orange text-glow animate-pulse-subtle">99%</h2>
-            <p className="text-white mt-2 font-medium">Client<br/>Satisfaction</p>
+            <p className="text-gray-200 mt-2 font-medium text-sm tracking-wide">Client<br/>Satisfaction</p>
           </div>
         </div>
       </div>
