@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,9 +25,10 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
-    { name: 'About', href: '#about' },
-    { name: 'Process', href: '#process' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Who We Are', href: '#about' },
+    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Blog', href: '#blog' },
+    { name: 'Contact Us', href: '#contact' },
   ];
 
   return (
@@ -35,13 +36,15 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <a href="#home" className="flex items-center">
-            <h1 className={`font-montserrat font-extrabold text-2xl md:text-3xl ${scrolled ? 'text-tectera-blue' : 'text-white'}`}>
-              <span className="gradient-text">TECTERA</span>
-            </h1>
+            <img 
+              src="/tectera-logo.png" 
+              alt="Tectera Logo" 
+              className="h-10 md:h-12 w-auto" 
+            />
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <a 
                 key={link.name} 
@@ -51,6 +54,10 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
+            <div className={`flex items-center space-x-2 ml-4 ${scrolled ? 'text-tectera-blue' : 'text-white'}`}>
+              <Phone size={16} className="animate-pulse" />
+              <span className="font-medium">+94 11 234 5678</span>
+            </div>
           </div>
 
           {/* Mobile Navigation Toggle */}
@@ -79,6 +86,10 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
+              <div className="flex items-center space-x-2 text-tectera-blue pt-2 border-t border-gray-100">
+                <Phone size={16} />
+                <span className="font-medium">+94 11 234 5678</span>
+              </div>
             </div>
           </div>
         )}

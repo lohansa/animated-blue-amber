@@ -36,7 +36,7 @@ const Hero = () => {
           <div className="space-y-6 reveal">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
               <span className="text-white">Digital Solutions </span>
-              <span className="bg-gradient-to-r from-tectera-orange to-tectera-orange-light text-transparent bg-clip-text">for the Modern World</span>
+              <div className="typing-animation mt-2 text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-tectera-orange to-tectera-orange-light text-transparent bg-clip-text">for the Modern World</div>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-100 max-w-xl">
