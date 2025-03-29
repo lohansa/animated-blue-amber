@@ -27,27 +27,50 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center bg-tectera-blue text-white overflow-hidden">
-      {/* Background gradient decorations */}
-      <div className="absolute top-20 right-20 w-96 h-96 bg-tectera-orange rounded-full opacity-20 blur-3xl"></div>
-      <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-tectera-blue-light rounded-full opacity-30 blur-3xl"></div>
+      {/* Enhanced background decorations */}
+      <div className="absolute top-20 right-20 w-96 h-96 bg-tectera-orange rounded-full opacity-20 blur-3xl animate-pulse-slow"></div>
+      <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-tectera-blue-light rounded-full opacity-30 blur-3xl animate-pulse-slow"></div>
+      <div className="absolute top-1/3 left-1/4 w-32 h-32 bg-blue-400 rounded-full opacity-20 blur-xl animate-float"></div>
+      <div className="absolute bottom-1/4 right-1/3 w-48 h-48 bg-orange-300 rounded-full opacity-20 blur-xl animate-float-rotate"></div>
       
       <div className="container mx-auto px-4 md:px-6 py-20 pt-32 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 reveal">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-              <span className="text-white">Digital Solutions </span>
-              <div className="typing-animation mt-2 text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-tectera-orange to-tectera-orange-light text-transparent bg-clip-text">for the Modern World</div>
+              <span className="text-white fancy-text-shadow">Digital Solutions </span>
+              <div className="modern-typing mt-2 text-3xl md:text-4xl lg:text-5xl">
+                <span className="letter">f</span>
+                <span className="letter">o</span>
+                <span className="letter">r</span>
+                <span className="letter"> </span>
+                <span className="letter">t</span>
+                <span className="letter">h</span>
+                <span className="letter">e</span>
+                <span className="letter"> </span>
+                <span className="letter">M</span>
+                <span className="letter">o</span>
+                <span className="letter">d</span>
+                <span className="letter">e</span>
+                <span className="letter">r</span>
+                <span className="letter">n</span>
+                <span className="letter"> </span>
+                <span className="letter">W</span>
+                <span className="letter">o</span>
+                <span className="letter">r</span>
+                <span className="letter">l</span>
+                <span className="letter">d</span>
+              </div>
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-100 max-w-xl">
+            <p className="text-lg md:text-xl text-gray-100 max-w-xl fancy-text-shadow">
               Tectera helps businesses transform and thrive in the digital age with innovative solutions tailored to your needs.
             </p>
             
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
-              <a href="#services" className="bg-tectera-orange hover:bg-tectera-orange-light text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-center animate-bounce-gentle">
+              <a href="#services" className="btn-hover-slide bg-tectera-orange hover:bg-tectera-orange-light text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-center">
                 Explore Services
               </a>
-              <a href="#contact" className="bg-transparent hover:bg-white/10 border-2 border-white text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 text-center">
+              <a href="#contact" className="btn-hover-slide bg-transparent hover:bg-white/10 border-2 border-white text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 text-center">
                 Contact Us
               </a>
             </div>
@@ -60,8 +83,14 @@ const Hero = () => {
                 <img 
                   src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
                   alt="Digital Technology" 
-                  className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-white/30 animate-float"
+                  className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-4 border-white/30 animate-float shadow-2xl"
                 />
+              </div>
+              <div className="absolute -top-6 -right-6 w-24 h-24 bg-tectera-orange rounded-full flex items-center justify-center text-white font-bold animate-float-rotate shadow-lg">
+                <span className="text-sm">Innovative</span>
+              </div>
+              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-tectera-blue-light rounded-full flex items-center justify-center text-white font-bold animate-float shadow-lg">
+                <span className="text-sm">Digital</span>
               </div>
             </div>
           </div>
@@ -74,8 +103,8 @@ const Hero = () => {
             { title: '50+', subtitle: 'Team Members' },
             { title: '99%', subtitle: 'Client Satisfaction' }
           ].map((stat, index) => (
-            <div key={index} className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold gradient-text">{stat.title}</h2>
+            <div key={index} className="text-center transform hover:scale-105 transition-transform duration-300">
+              <h2 className="text-3xl md:text-4xl font-bold gradient-text animate-shimmer">{stat.title}</h2>
               <p className="text-gray-300 mt-2">{stat.subtitle}</p>
             </div>
           ))}

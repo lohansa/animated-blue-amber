@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -81,6 +80,7 @@
   }
 }
 
+/* Reveal animations */
 .reveal {
   position: relative;
   opacity: 0;
@@ -93,6 +93,7 @@
   transform: translateY(0);
 }
 
+/* Gradient texts */
 .gradient-text {
   @apply bg-gradient-to-r from-tectera-blue to-tectera-orange text-transparent bg-clip-text;
 }
@@ -109,23 +110,18 @@
   @apply py-16 md:py-24;
 }
 
-/* Typing animation */
-.typing-animation {
+/* Modern typing animation */
+.modern-typing .letter {
+  @apply bg-gradient-to-r from-tectera-orange to-tectera-orange-light text-transparent bg-clip-text;
+  opacity: 0;
   display: inline-block;
-  overflow: hidden;
-  border-right: 3px solid transparent;
-  white-space: nowrap;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  transform: translateY(20px) scale(0.8);
+  transition: all 0.3s ease;
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: rgba(249, 115, 22, 0.8) }
+.modern-typing .letter.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 /* Enhanced animations */
@@ -171,4 +167,63 @@
 
 .btn-hover-slide:hover:before {
   left: 100%;
+}
+
+/* Text shadow effects */
+.fancy-text-shadow {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Pulse animation */
+@keyframes pulse-subtle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.pulse-subtle {
+  animation: pulse-subtle 3s infinite ease-in-out;
+}
+
+/* New 3D text effect */
+.text-3d {
+  text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+/* Glow effect */
+.text-glow {
+  text-shadow: 0 0 5px rgba(255,255,255,0.5),
+               0 0 10px rgba(255,255,255,0.5),
+               0 0 15px #F97316,
+               0 0 20px #F97316,
+               0 0 25px #F97316;
+}
+
+/* Typing animation */
+.typing-animation {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 3px solid transparent;
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgba(249, 115, 22, 0.8) }
 }

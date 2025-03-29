@@ -13,7 +13,7 @@ import Awards from '@/components/Awards';
 
 const Index = () => {
   useEffect(() => {
-    // Function to reveal elements on scroll
+    // Enhanced reveal animations on scroll
     const handleScroll = () => {
       const reveals = document.querySelectorAll('.reveal');
       
@@ -28,11 +28,27 @@ const Index = () => {
       });
     };
     
+    // Initialize modern typing animation
+    const initializeTypingAnimation = () => {
+      const letters = document.querySelectorAll('.modern-typing .letter');
+      
+      letters.forEach((letter, index) => {
+        setTimeout(() => {
+          letter.classList.add('visible');
+        }, index * 120);
+      });
+    };
+    
     // Initialize scroll event listener
     window.addEventListener('scroll', handleScroll);
     
     // Initial call to reveal elements that are already visible
     handleScroll();
+    
+    // Initialize typing animation after a short delay
+    setTimeout(() => {
+      initializeTypingAnimation();
+    }, 500);
     
     // Clean up the event listener on component unmount
     return () => window.removeEventListener('scroll', handleScroll);

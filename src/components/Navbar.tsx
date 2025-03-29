@@ -39,7 +39,7 @@ const Navbar = () => {
             <img 
               src="/tectera-logo.png" 
               alt="Tectera Logo" 
-              className="h-10 md:h-12 w-auto" 
+              className="h-10 md:h-12 w-auto transition-all duration-500 hover:scale-110" 
             />
           </a>
 
