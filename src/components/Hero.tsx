@@ -37,7 +37,8 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 reveal">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-              <span className="text-white fancy-text-shadow">Digital Solutions </span>
+              <span className="text-white fancy-text-shadow">Digital Solutions</span>
+              <br />
               <div className="modern-typing mt-2 text-3xl md:text-4xl lg:text-5xl">
                 <span className="letter">f</span>
                 <span className="letter">o</span>
@@ -96,18 +97,27 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 reveal">
-          {[
-            { title: '10+', subtitle: 'Years Experience' },
-            { title: '200+', subtitle: 'Projects Completed' },
-            { title: '50+', subtitle: 'Team Members' },
-            { title: '99%', subtitle: 'Client Satisfaction' }
-          ].map((stat, index) => (
-            <div key={index} className="text-center transform hover:scale-105 transition-transform duration-300">
-              <h2 className="text-3xl md:text-4xl font-bold gradient-text animate-shimmer">{stat.title}</h2>
-              <p className="text-gray-300 mt-2">{stat.subtitle}</p>
-            </div>
-          ))}
+        <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 reveal">
+          {/* Enhanced stats with clearer presentation */}
+          <div className="stats-card bg-white/10 p-6 rounded-xl backdrop-blur-sm transform hover:scale-105 transition-all duration-300 text-center">
+            <h2 className="text-4xl font-bold text-tectera-orange text-glow animate-pulse-subtle">10+</h2>
+            <p className="text-white mt-2 font-medium">Years<br/>Experience</p>
+          </div>
+          
+          <div className="stats-card bg-white/10 p-6 rounded-xl backdrop-blur-sm transform hover:scale-105 transition-all duration-300 text-center">
+            <h2 className="text-4xl font-bold text-tectera-orange text-glow animate-pulse-subtle">200+</h2>
+            <p className="text-white mt-2 font-medium">Projects<br/>Completed</p>
+          </div>
+          
+          <div className="stats-card bg-white/10 p-6 rounded-xl backdrop-blur-sm transform hover:scale-105 transition-all duration-300 text-center">
+            <h2 className="text-4xl font-bold text-tectera-orange text-glow animate-pulse-subtle">50+</h2>
+            <p className="text-white mt-2 font-medium">Team<br/>Members</p>
+          </div>
+          
+          <div className="stats-card bg-white/10 p-6 rounded-xl backdrop-blur-sm transform hover:scale-105 transition-all duration-300 text-center">
+            <h2 className="text-4xl font-bold text-tectera-orange text-glow animate-pulse-subtle">99%</h2>
+            <p className="text-white mt-2 font-medium">Client<br/>Satisfaction</p>
+          </div>
         </div>
       </div>
       
