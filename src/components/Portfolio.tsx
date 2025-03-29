@@ -43,7 +43,7 @@ const Portfolio = () => {
     {
       title: "Smart Home System",
       category: "IoT Solution",
-      image: "https://images.unsplash.com/photo-1558002038-1055e2dae2c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80",
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80",
       description: "Integrated IoT solution for home automation and security management."
     }
   ];

@@ -71,7 +71,7 @@ const Contact = () => {
     {
       icon: <MapPin className="h-6 w-6 text-tectera-orange" />,
       title: "Office",
-      details: "123 Tech Street, San Francisco, CA",
+      details: "30, 5/1 Nelson Pl, Colombo 00600, Sri Lanka",
       link: "https://maps.google.com"
     }
   ];
